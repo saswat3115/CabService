@@ -1,0 +1,23 @@
+<nav class="navbar navbar-inverse" role="navigation" >
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Quick Chat</a>
+      </div>
+      <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+        <ul class="nav navbar-nav navbar-right" >
+          <li><a href="tel:9043897640"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+          <li ng-show="onload()"><a href="/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+          <li ng-show="onload()"><a href="/chat"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></li>
+          <li ng-show="onload()"><a href="/notification">            
+            <span class="badge badge-notify" style="background:red;">
+                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> 3
+              </span></a></li>          
+          <li ng-show="onload()"><a href="#" ng-click="logout()">logout</a></li>
+        </ul>
+      </div>
+    </nav>

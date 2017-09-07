@@ -1,0 +1,9 @@
+<div class="panel panel-default" ng-init="getAll()">
+  <div class="panel-heading">Welcome {{ username }}</div>
+  <div class="panel-body clickable" ng-repeat="user in allusers track by $index">
+        <div class="col-sm-10" >
+          <i class="fa fa-comment text-left" aria-hidden="true"></i>&nbsp {{user.fname}} {{user.lname}}
+        </div>
+        
+  </div>
+</div>
