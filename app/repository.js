@@ -1,5 +1,4 @@
 var db = require('diskdb');
-console.log(__dirname);
 db.connect('storage', ['user','userSession']);
 // db.connect('storage',['userSession']);
 
