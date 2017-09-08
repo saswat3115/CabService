@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse" role="navigation" >
+<nav class="navbar navbar-default" role="navigation" >
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
           <span class="sr-only">Toggle navigation</span>
@@ -9,7 +9,19 @@
         <a class="navbar-brand" href="#">Quick Chat</a>
       </div>
       <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+          <div class="col-sm-3 col-md-3">
+              <form class="navbar-form" role="search">
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search" name="q">
+                  <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search" style="line-height:1.45;"></i></button>
+                  </div>
+              </div>
+              </form>
+          </div>
         <ul class="nav navbar-nav navbar-right" >
+          <!-- <li><input type="text" class="form-control" placeholder="Search" name="q">
+            </li> -->
           <li><a href="tel:9043897640"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
           <li ng-show="onload()"><a href="/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
           <li ng-show="onload()"><a href="/chat"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></li>
