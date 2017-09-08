@@ -1,14 +1,27 @@
 <div class="container-fluid">
   <h1>Hello {{ username }} !</h1>
-  <div class="row">
-    <div class="col-sm-4">
-      <img src="../img/male_empty_profile.png" class="img-responsive" alt="profile_image"> <br />
-      <label class="btn btn-default btn-file">
-          Upload image <input type="file" style="display: none;">
-      </label>
+  <form ng-controller="UploadController as up" name="up.upload_form">    
+    <div class="row">
+      <div class="col-sm-4">
+        <img class="img-responsive" ng-show="!!up.file" ngf-thumbnail="up.file || '../img/male_empty_profile.png'"> <br />
+
+        <input type="file" ngf-select ng-model="up.file" name="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB"
+        />
+        <!-- Image thumbnail: <img style="width:100px;" ng-show="!!up.file" ngf-thumbnail="up.file || '/thumb.jpg'"/> -->
+        <i ng-show="up.upload_form.file.$error.required">*required</i><br>
+        <i ng-show="up.upload_form.file.$error.maxSize">File too large 
+        {{up.file.size / 1000000|number:1}}MB: max 20M</i>
+        <!--  Multiple files
+          <div class="button" ngf-select ng-model="up.files" ngf-multiple="true">Select</div>
+          Drop files: <div ngf-drop ng-model="up.files" class="drop-box">Drop</div> -->
+        <button type="submit" ng-click="up.submit()">submit</button>
+        <p>{{up.progress}}</p>
+
+      </div>
+      <div class="col-sm-8" style="background-color:pink;">
+        <p>Content under construction..</p>
+
+      </div>
     </div>
-    <div class="col-sm-8" style="background-color:pink;">
-      <p>Content under construction..</p>
-    </div>
-  </div>
+  </form>
 </div>
