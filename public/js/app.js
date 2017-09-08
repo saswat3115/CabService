@@ -1,5 +1,5 @@
 angular.module('chatApp', ['ngRoute','appRoutes', 'ngCookies', 'MenuCtrl', 'ChatCtrl', 'LoginCtrl', 'SignupCtrl',
-        'HomeCtrl', 'ui.bootstrap', 'ApiService', 'session'])
+        'HomeCtrl', 'ui.bootstrap', 'ApiService', 'session','ngFileUpload', 'UploadCtrl'])
     .directive('menubBar', function () {
         return {
             restrict: 'E',

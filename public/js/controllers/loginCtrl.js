@@ -17,10 +17,9 @@ angular.module('LoginCtrl',[]).controller('LoginController', function($scope,$ro
 
     $scope.auth = function() {    
         //alert("cookie " + sessionService.getCookie());    
-        apiService.authenticate($scope.user).then(function(result){  
-            console.log(JSON.stringify(result));          
+        apiService.authenticate($scope.user).then(function(result){                    
             if(result.status == "200"){                                
-                sessionService.setCookie("loggedinUser",result.data);               
+                sessionService.setCookie("loggedinUser", result.data);               
                 $location.path(homePath);
             }else{
                 alert("authentication failed ! " + result.status);
