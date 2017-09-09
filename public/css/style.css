@@ -1,5 +1,5 @@
 .control-label{
-    color: white !important;
+    color: #3A9CDD !important;
 }
 html,body {
     height:100%;
@@ -18,4 +18,20 @@ body {
 .footer {
     display: table-row;
     height: 10px;
+}
+
+.curvy-border{    
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+.padding{
+    padding: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: pink;
+    }
 }
