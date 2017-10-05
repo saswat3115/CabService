@@ -21,8 +21,8 @@ angular.module('LoginCtrl',[]).controller('LoginController', function($scope,$ro
             if(result.status == "200"){                                
                 sessionService.setCookie("loggedinUser", result.data);               
                 $location.path(homePath);
-            }else{
-                alert("authentication failed ! " + result.status);
+            }else{                                                
+                $rootScope.errorMsg = "Unable to login ! " + result.status;                
             }
         });
     }

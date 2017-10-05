@@ -27,11 +27,16 @@ body {
 }
 
 .padding{
-    padding: 10px;
+    margin-left: 10px;
 }
 
 @media only screen and (max-width: 500px) {
     body {
         background-color: pink;
+    }
+
+    .padding{
+        margin-left: 0px;
+        margin-top: 10px;
     }
 }

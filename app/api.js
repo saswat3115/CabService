@@ -64,7 +64,6 @@ module.exports = function (app) {
 
 }
 
-
 function buildUserToken(user_json) {
     return {
         "fname": user_json.fname,

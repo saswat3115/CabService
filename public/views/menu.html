@@ -19,7 +19,8 @@
         </div>
       </form>
     </div>
-    <ul class="nav navbar-nav navbar-right" ng-show="onload()">
+    <div ng-show="showGreeting"><p ng-bind="labelMsg" class="bg-danger"></p></div>
+    <ul class="nav navbar-nav navbar-right" ng-if="onload()">
       <!-- <li><input type="text" class="form-control" placeholder="Search" name="q">
             </li> -->
       <li><a href="tel:9043897640"><i class="fa fa-phone" aria-hidden="true"></i> contact</a></li>
