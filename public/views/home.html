@@ -16,11 +16,17 @@
           Drop files: <div ngf-drop ng-model="up.files" class="drop-box">Drop</div> -->
         <!-- <button type="submit" ng-click="up.submit()" class="btn btn-primary">save changes</button> -->
         <p>{{up.progress}}</p>
+        <div>
+          <div>Profile</div>
+          <div>Friends</div>
+          <div>Photos</div>
+          <div></div>
+        </div>
       </form>
     </div>
 
-    <div class="col-sm-9 curvy-border animated fadeInRight" style="margin-left:10px;">
-      <h2>Hello {{ username }} !</h2>
+    <div class="col-sm-9 curvy-border padding animated fadeInRight" ng-init="speak()">
+      <h2>Hello {{ username }} !</h2>      
       <form class="form-horizontal">
         <div class="col-sm-10">
             <input type="text" class="form-control" id="fname" placeholder="Enter first name" >

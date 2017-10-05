@@ -9,6 +9,7 @@ angular.module('chatApp', ['ngRoute','appRoutes', 'ngCookies', 'MenuCtrl', 'Chat
         }
     }).run(['$rootScope', '$location', 'sessionService', '$route',
         function ($rootScope, $location, sessionService, $route) {
+            $rootScope.errorMsg = '';
             $rootScope.$on('$routeChangeStart', function (event, next, prev) {
                 if (sessionService.getCookie('loggedinUser') == undefined &&
                     next.$$route.originalPath != '/signup') {

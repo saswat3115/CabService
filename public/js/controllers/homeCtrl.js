@@ -2,5 +2,9 @@ angular.module('HomeCtrl', []).controller('HomeController', function ($scope, $l
     apiService, sessionService) {    
 
     $scope.username = sessionService.getCookie('loggedinUser').fname;
+
+    $scope.speak = function(){
+        responsiveVoice.speak("Hello " + $scope.username);
+    };
     
 });
